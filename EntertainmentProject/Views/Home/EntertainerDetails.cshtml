@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Entertainer Details";
+}
+
+@model Entertainer
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EntertainerList">Back</a>
+
+<table class="table table-bordered">
+
+    <thead class="fw-bold">
+        <tr>
+            <td>Stage Name</td>
+            <td>SSN</td>
+            <td>StreetAddress</td>
+            <td>City</td>
+            <td>State</td>
+            <td>ZipCode</td>
+            <td>Phone Number</td>
+            <td>Webpage</td>
+            <td>Email</td>
+            <td>Entry Date</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>@Model.EntStageName</td>
+            <td>@Model.EntSsn</td>
+            <td>@Model.EntStreetAddress</td>
+            <td>@Model.EntCity</td>
+            <td>@Model.EntState</td>
+            <td>@Model.EntZipCode</td>
+            <td>@Model.EntPhoneNumber</td>
+            <td>@Model.EntWebPage</td>
+            <td>@Model.EntEmailAddress</td>
+            <td>@Model.DateEntered</td>
+            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@Model.EntertainerId">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@Model.EntertainerId">Delete</a></td>
+        </tr>
+    </tbody>
+
+</table>
